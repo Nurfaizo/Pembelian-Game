@@ -1,0 +1,267 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include<conio.h>
+#include<math.h>
+
+/*
+This Code Made by 
+Kelompok 3 :
+- Audhia Safitri
+- M. Nurfaiz Satriani
+- Putri Amelia
+*/
+using namespace std;
+void heading(){
+	cout<<"\t|-------------------------------------|"<<endl;
+	cout<<"\t|               WELCOME               |"<<endl;
+	cout<<"\t|                 TO                  |"<<endl;
+	cout<<"\t|                KUKUS                |"<<endl;
+	cout<<"\t|-------------------------------------|"<<endl;
+}
+
+void footer(){
+	cout<<">>>>>         Terima Kasih        <<<<<"<<endl;
+	cout<<">>>>> Silahkan Berbelanja Kembali <<<<<"<<endl;
+}
+
+
+int isi(){
+	string tipe;
+	double bayar1, bayar2;
+	int order, jml_tr, jumlah, pajak, total, kembali, kurang;
+	char nama[30], jwb, back;
+	int harga[10] = {700000, 256000, 550000 , 170000, 800000, 760000, 270000, 330000, 500000, 480000};
+	int x;
+	cout<<"\t\tLogin";
+	cout<<endl<<"Nama\t\t: ";
+	cin>>nama;
+	cout<<"Masukkan saldo\t: ";
+	cin>>bayar1;
+	system("cls");
+		
+	do{	
+	 do {
+		 system("color 97");
+		 system("cls");
+		 heading();
+		 cout<<endl<<"          Berikut list game yang tersedia          "<<endl;	
+		 cout<<"|--------------------------------------------------|"<<endl;
+		 cout<<"| 1. Forza Horizon 5              : \t Rp."<<harga[0]<<" |"<<endl;
+		 cout<<"| 2. Rainbow Six Stage            : \t Rp."<<harga[1]<<" |"<<endl;
+		 cout<<"| 3. God Eater 3                  : \t Rp."<<harga[2]<<" |"<<endl;
+		 cout<<"| 4. Muv Luv Alternative          : \t Rp."<<harga[3]<<" |"<<endl;
+		 cout<<"| 5. Call Of Duty Black Ops III   : \t Rp."<<harga[4]<<" |"<<endl;
+		 cout<<"| 6. Fifa 23                      : \t Rp."<<harga[5]<<" |"<<endl;
+		 cout<<"| 7. Fallout 4                    : \t Rp."<<harga[6]<<" |"<<endl;
+		 cout<<"| 8. Elderscroll: V Skyrim        : \t Rp."<<harga[7]<<" |"<<endl;
+		 cout<<"| 9. CodeVein                     : \t Rp."<<harga[8]<<" |"<<endl;
+		 cout<<"| 10. Battlefield 4               : \t Rp."<<harga[9]<<" |"<<endl;
+		 cout<<"|--------------------------------------------------|"<<endl;
+		 cout<<"saldo anda : "<<bayar1<<endl;
+		 cout<<"Silahkan Pilih Game Dengan Memasukkan Angka"<<endl;
+		 cout<<"Pilih Game : ";
+		 cin>>order;
+
+	switch (order){
+		case 1 :
+			system("cls");
+			system("color 04");
+			cout<<endl<<"Pilihan Anda adalah : Froza Horizon 5"<<endl;
+			tipe ="Froza Horizon 5";
+			x=0;
+			cout<<"Harga : Rp."<<harga [0]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"Y/T : ";
+			cin>>jwb;
+			break;
+			
+		case 2 :
+			system("color 06");
+			system("cls");
+			cout<<endl<<"Game yang Anda pilih : Rainbow Six Stage"<<endl;
+			tipe ="Rainbow Six Siege";
+			x=1;
+			cout<<"Harga : Rp."<<harga [1]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 3 :
+			system("color 03");
+			system("cls");
+			cout<<"\nGame yang Anda pilih : God Eater 3"<<endl;
+			tipe ="God Eater 3";
+			x=2;
+			cout<<"Harga : Rp."<<harga [2]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik (T/t) jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 4 :
+			system("color 05");
+			system("cls");
+			cout<<"\nGame yang Anda pilih :Muv Luv Alternative"<<endl;
+			tipe ="Muv Luv Alternative";
+			x=3;
+			cout<<"Harga : Rp."<<harga [3]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 5 :
+			system("color 14");
+			system("cls");
+			cout<<"\nGame yang Anda pilih : Call Of Duty Black Ops III"<<endl;
+			tipe ="Call Of Duty : Black Ops III";
+			x=4;
+			cout<<"Harga : Rp."<<harga [4]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+	    	break;	
+				
+		case 6 :
+			system("color 09");
+			system("cls");
+			cout<<"\nGame yang Anda pilih : Fifa 23"<<endl;
+			tipe ="Fifa 23";
+			x=5;
+			cout<<"Harga : Rp."<<harga [5]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 7 :
+			system("color 03");
+			system("cls");
+			cout<<"\nGame yang Anda pilih : Fallout 4"<<endl;
+			tipe ="Fallout 4";
+			x=6;
+			cout<<"Harga : Rp."<<harga [6]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"Ketik [Y/y] jika setuju"<<endl;
+			cout<<"Ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 8 :
+			system("color 07");
+			system("cls");
+			cout<<"\nGame yang Anda pilih : Elderscroll: V Skyrim"<<endl;
+			tipe ="Elderscroll: V Skyrim";
+			x=7;
+			cout<<"Harga : Rp."<<harga [7]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"ketik [Y/y] jika setuju"<<endl;
+			cout<<"ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 9 :
+			system("color 94");
+			system("cls");
+			cout<<"\nGame yang Anda pilih :CodeVein"<<endl;
+			tipe ="Code Vein";
+			x=8;
+			cout<<"Harga : Rp."<<harga [8]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"ketik [Y/y] jika setuju"<<endl;
+			cout<<"ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T] : ";
+			cin>>jwb;
+			break;
+			
+		case 10 :
+			system("color 74");
+			system("cls");
+			cout<<"\nGame yang Anda pilih :Battlefield 4"<<endl;
+			tipe ="Battlefield 4";
+			x=9;
+			cout<<"Harga : Rp."<<harga [9]<<endl<<endl;
+			cout<<"Apakah Anda ingin membeli game ini? "<<endl;
+			cout<<"ketik [Y/y] jika setuju"<<endl;
+			cout<<"ketik [T/t] jika tidak"<<endl;
+			cout<<"[Y/T]: ";
+			cin>>jwb;
+			break;
+			
+		default:
+		cout<<"Game tidak tersedia";
+		jwb='t';
+		getch();
+		break;				
+	}
+		
+	jumlah = harga[x];
+	
+} while (jwb == 'T'|| jwb == 't');
+	system("cls");
+	system("color 0a" );
+	pajak = jumlah * 0.01;
+    total = jumlah + pajak;
+	cout<<endl<<"#########################################"<<endl;
+	cout<<"            Struk Pembayaran             "<<endl;
+	cout<<endl<<"#########################################"<<endl;
+	cout<<tipe<<endl<<endl;
+	cout<<"Pembeli \t: \t"<<nama<<endl;
+	cout<<"Jumlah \t\t: \tRp."<<jumlah<<endl;
+	cout<<"Pajak \t\t: \tRp."<< pajak <<endl;
+	cout<<"total \t\t: \tRp."<< total <<endl;
+	cout<<"bayar \t\t: \tRp."<< bayar1<<endl;
+	
+	
+for(int y = 1; y < total; y++){
+		if(bayar1 < total){
+		system("color 04");
+		kurang = total - bayar1;
+		cout<<endl<<"===== Uangmu kurang, silahkan bayar kembali ====="<<endl;
+		cout<<endl<<"Silahkan bayar kembali sebesar : Rp."<<kurang<<endl;
+        cout<<"Bayar \t\t: \tRp.";
+        cin>>bayar2;
+        bayar1 += bayar2;
+	}
+}
+    	kembali = bayar1 - total;
+		bayar1=kembali; 
+    	cout<<"Kembali \t: \tRp."<<kembali<<endl;
+    	cout<<endl<<"Jangan lupa datang kembali"<<endl;
+    	cout<<endl<<"#########################################"<<endl;
+			cout<<"apa kamu ingin membeli lagi?"<<endl;
+		cout<<"[Y/T] : ";
+		cin>>back;
+		
+}
+while(back=='y' || back=='Y');
+	cout<<endl;
+	system("color 0a");
+	system("cls");
+	footer();	
+}
+	
+
+
+int main(){
+	isi();
+	return 0;
+}
